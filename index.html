@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kê khai thông tin thân nhân - Mẫu 367</title>
+<style>:root{--red:#a3161a;--red2:#7a0e12;--gold:#d9a441;--bg:#f5f3ee;--card:#fff;--line:#d9d2c3;--ink:#1f2328;--mute:#646a73;--ok:#1a7f4b;--warn:#b45309;--soft:#fbf7ee}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 "Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+header.top{background:linear-gradient(135deg,var(--red),var(--red2));color:#fff;padding:14px 0;border-bottom:3px solid var(--gold)}
+.brand{display:flex;gap:12px;align-items:center}
+.brand .star{font-size:30px;color:var(--gold);line-height:1}
+.brand b{display:block;font-size:17px;letter-spacing:.3px}
+.brand small{display:block;opacity:.9;font-size:13px}
+main{padding:18px 16px 60px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px;margin:0 0 16px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.card h2{margin:0 0 6px;font-size:18px;color:var(--red2)}
+.card h3{margin:0 0 8px;font-size:16px}
+p{margin:0 0 10px}
+.mute{color:var(--mute);font-size:13.5px}
+.hint{color:var(--mute);font-size:13px;margin:2px 0 8px}
+h4.sec{margin:18px 0 6px;padding:6px 10px;background:var(--soft);border-left:4px solid var(--gold);font-size:14.5px;border-radius:0 6px 6px 0}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 14px}
+.fld.wide{grid-column:1/-1}
+.fld label{display:block;font-size:13px;font-weight:600;margin-bottom:3px}
+.fld label .req{color:var(--red)}
+input,select,textarea{width:100%;font:inherit;padding:8px 10px;border:1px solid #bdb6a6;border-radius:6px;background:#fff;color:var(--ink)}
+textarea{min-height:64px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:0;border-color:var(--gold)}
+input[type=checkbox]{width:auto;margin-right:6px}
+.inline{display:flex;gap:6px}
+.inline>*{flex:1;min-width:0}
+.inline>.grow2{flex:2}
+.err{color:var(--red);font-size:13px;margin-top:3px}
+.warnbox{background:#fff7e6;border:1px solid #f0c36d;border-radius:8px;padding:10px 12px;margin:10px 0;font-size:14px}
+.okbox{background:#ecf8f1;border:1px solid #9bd3b4;border-radius:8px;padding:10px 12px;margin:10px 0;font-size:14px}
+.warnbox ul,.okbox ul{margin:6px 0 0;padding-left:20px}
+.warnbox li{margin:3px 0}
+button{font:inherit;cursor:pointer;border-radius:6px;border:1px solid #bdb6a6;background:#fff;padding:8px 14px;color:var(--ink)}
+button:hover{background:#f3efe6}
+button.pri{background:var(--red);border-color:var(--red);color:#fff;font-weight:600}
+button.pri:hover{background:var(--red2)}
+button.sm{padding:4px 9px;font-size:13px}
+button.danger{color:var(--red);border-color:#e3b3b3}
+button:disabled{opacity:.5;cursor:not-allowed}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+.bar .sp{flex:1}
+.tabs{display:flex;flex-wrap:wrap;gap:4px;margin:0 0 14px;border-bottom:2px solid var(--line)}
+.tabs button{border:0;border-radius:6px 6px 0 0;background:transparent;padding:9px 14px;font-weight:600;color:var(--mute);margin-bottom:-2px;border-bottom:3px solid transparent}
+.tabs button.on{color:var(--red2);border-bottom-color:var(--red);background:#fff}
+.who{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;background:#fff;border:1px solid var(--line);border-left:4px solid var(--red);border-radius:8px;padding:10px 14px;margin-bottom:14px;font-size:14px}
+details.person{background:#fff;border:1px solid var(--line);border-radius:10px;margin-bottom:12px}
+details.person>summary{cursor:pointer;padding:12px 14px;font-weight:600;list-style-position:inside}
+details.person[open]>summary{border-bottom:1px solid var(--line);background:var(--soft);border-radius:10px 10px 0 0}
+details.person .body{padding:6px 14px 14px}
+.badge{display:inline-block;white-space:nowrap;font-size:12px;font-weight:600;padding:1px 8px;border-radius:10px;margin-left:8px;vertical-align:middle}
+.badge.w{background:#fde8c8;color:var(--warn)}
+.badge.ok{background:#d9f2e3;color:var(--ok)}
+.badge.i{background:#e6ebf3;color:#34507a}
+.trow{display:flex;gap:6px;align-items:flex-end;margin-bottom:6px}
+.trow>div{flex:1;min-width:0}
+.trow>div.wide{flex:3}
+.trow small{display:block;font-size:11.5px;color:var(--mute)}
+.trow>button{flex:0 0 auto}
+table.list{width:100%;border-collapse:collapse;font-size:14px}
+table.list th,table.list td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+table.list th{background:var(--soft)}
+.scroll{overflow-x:auto}
+.doc{background:#fff;border:1px solid var(--line);padding:28px 34px;border-radius:6px;overflow-x:auto}
+@media (max-width:640px){.grid{grid-template-columns:1fr}.trow{flex-wrap:wrap}.trow>div{flex:1 1 45%}.trow>div.wide{flex:1 1 100%}.doc{padding:14px}.brand b{font-size:15px}}
+@media print{.noprint,header.top{display:none!important}body{background:#fff}main{padding:0}.wrap{max-width:none;padding:0}.doc{border:0;padding:0;overflow:visible}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><div class="brand"><span class="star">★</span><div><b>KÊ KHAI THÔNG TIN THÂN NHÂN</b><small>Phục vụ báo cáo theo Quy định số 367-QĐ/TW ngày 04/9/2025 của Bộ Chính trị</small></div></div></div></header>
+<main class="wrap">
+<section id="login" class="card" style="max-width:620px;margin:24px auto">
+  <h2>Xác thực trước khi kê khai</h2>
+  <p class="mute">Để bắt đầu, anh/chị cần nhập đúng số giấy tờ của nhân vật trung tâm (cán bộ, đảng viên, người có nguyện vọng vào Đảng cần bổ sung lý lịch) và chọn mối quan hệ của anh/chị với người đó.</p>
+  <div class="fld" style="margin-bottom:12px"><label for="lgId">Số CCCD / CMND / Hộ chiếu của nhân vật trung tâm <span class="req">*</span></label><input id="lgId" type="text" inputmode="text" autocomplete="off" placeholder="Ví dụ: 079xxxxxxxxx"></div>
+  <div class="fld" style="margin-bottom:12px"><label for="lgRel">Anh/chị là gì của nhân vật trung tâm? <span class="req">*</span></label><select id="lgRel"></select></div>
+  <div class="bar"><button id="lgBtn" type="button" class="pri">Xác thực và bắt đầu kê khai</button></div>
+  <div id="lgMsg" class="err"></div>
+  <p id="lgVer" class="hint" style="margin-top:10px"></p>
+  <p class="hint">Nội dung kê khai chỉ được gửi về chi bộ khi anh/chị bấm "Gửi phiếu" ở bước cuối. Trong khi kê khai, nên bấm "Tải file dữ liệu" để lưu tạm, phòng khi mất kết nối.</p>
+</section>
+<section id="app" hidden>
+  <div id="who" class="who noprint"></div>
+  <div id="tabs" class="tabs noprint"></div>
+  <div id="pane"></div>
+</section>
+</main>
+<script>
+'use strict';
+/* ================= Mã hóa (SHA-256 thuần JS, chạy được cả khi mở file trực tiếp) ================= */
+var K256 = (function () {
+  var k = [], n = 2, i = 0;
+  while (i < 64) {
+    var p = true;
+    for (var d = 2; d * d <= n; d++) if (n % d === 0) { p = false; break; }
+    if (p) { var c = Math.pow(n, 1 / 3); k[i++] = ((c - Math.floor(c)) * 4294967296) >>> 0; }
+    n++;
+  }
+  return k;
+})();
+function sha256(bytes) {
+  var H = [0x6a09e667, 0xbb67ae85, 0x3c6ef372, 0xa54ff53a, 0x510e527f, 0x9b05688c, 0x1f83d9ab, 0x5be0cd19];
+  var l = bytes.length, n = ((l + 8) >> 6) + 1, m = new Uint8Array(n * 64);
+  m.set(bytes); m[l] = 0x80;
+  var dv = new DataView(m.buffer);
+  dv.setUint32(n * 64 - 4, (l * 8) >>> 0); dv.setUint32(n * 64 - 8, Math.floor(l / 536870912));
+  var w = new Int32Array(64), i;
+  for (var b = 0; b < n; b++) {
+    for (i = 0; i < 16; i++) w[i] = dv.getInt32(b * 64 + i * 4);
+    for (i = 16; i < 64; i++) {
+      var x = w[i - 15], y = w[i - 2];
+      w[i] = (w[i - 16] + ((x >>> 7 | x << 25) ^ (x >>> 18 | x << 14) ^ (x >>> 3)) + w[i - 7] + ((y >>> 17 | y << 15) ^ (y >>> 19 | y << 13) ^ (y >>> 10))) | 0;
+    }
+    var a = H[0], bb = H[1], c = H[2], d = H[3], e = H[4], f = H[5], g = H[6], h = H[7];
+    for (i = 0; i < 64; i++) {
+      var t1 = (h + ((e >>> 6 | e << 26) ^ (e >>> 11 | e << 21) ^ (e >>> 25 | e << 7)) + ((e & f) ^ (~e & g)) + K256[i] + w[i]) | 0;
+      var t2 = (((a >>> 2 | a << 30) ^ (a >>> 13 | a << 19) ^ (a >>> 22 | a << 10)) + ((a & bb) ^ (a & c) ^ (bb & c))) | 0;
+      h = g; g = f; f = e; e = (d + t1) | 0; d = c; c = bb; bb = a; a = (t1 + t2) | 0;
+    }
+    H[0] = (H[0] + a) | 0; H[1] = (H[1] + bb) | 0; H[2] = (H[2] + c) | 0; H[3] = (H[3] + d) | 0;
+    H[4] = (H[4] + e) | 0; H[5] = (H[5] + f) | 0; H[6] = (H[6] + g) | 0; H[7] = (H[7] + h) | 0;
+  }
+  var out = new Uint8Array(32), ov = new DataView(out.buffer);
+  for (i = 0; i < 8; i++) ov.setInt32(i * 4, H[i]);
+  return out;
+}
+function utf8(s) { return new TextEncoder().encode(s); }
+function hex(b) { var s = ''; for (var i = 0; i < b.length; i++) s += (b[i] < 16 ? '0' : '') + b[i].toString(16); return s; }
+function b64(b) { var s = ''; for (var i = 0; i < b.length; i++) s += String.fromCharCode(b[i]); return btoa(s); }
+function unb64(s) { var r = atob(s), b = new Uint8Array(r.length); for (var i = 0; i < r.length; i++) b[i] = r.charCodeAt(i); return b; }
+function normId(s) { return String(s || '').toUpperCase().replace(/[^0-9A-Z]/g, ''); }
+function deriveKey(salt, id) { var h = sha256(utf8(salt + '|' + id)); for (var i = 0; i < 4000; i++) h = sha256(h); return hex(h); }
+function idHash(key) { return hex(sha256(utf8('id|' + key))); }
+function xorStream(key, bytes) {
+  var out = new Uint8Array(bytes.length), blk;
+  for (var i = 0; i < bytes.length; i++) { if (i % 32 === 0) blk = sha256(utf8('enc|' + key + '|' + (i / 32))); out[i] = bytes[i] ^ blk[i % 32]; }
+  return out;
+}
+function encBlob(key, obj) { return b64(xorStream(key, utf8(JSON.stringify(obj)))); }
+function decBlob(key, s) { try { return JSON.parse(new TextDecoder().decode(xorStream(key, unb64(s)))); } catch (e) { return null; } }
+function uid() { return Date.now().toString(36) + Math.random().toString(36).slice(2, 8); }
+
+/* ================= Danh mục dùng chung ================= */
+var DAN_TOC = ['Kinh', 'Tày', 'Thái', 'Hoa', 'Khmer', 'Mường', 'Nùng', 'H’Mông', 'Dao', 'Gia Rai', 'Ngái', 'Ê Đê', 'Ba Na', 'Xơ Đăng', 'Sán Chay', 'Cơ Ho', 'Chăm', 'Sán Dìu', 'Hrê', 'Mnông', 'Ra Glai', 'Xtiêng', 'Bru - Vân Kiều', 'Thổ', 'Giáy', 'Cơ Tu', 'Gié Triêng', 'Mạ', 'Khơ Mú', 'Co', 'Tà Ôi', 'Chơ Ro', 'Kháng', 'Xinh Mun', 'Hà Nhì', 'Chu Ru', 'Lào', 'La Chí', 'La Ha', 'Phù Lá', 'La Hủ', 'Lự', 'Lô Lô', 'Chứt', 'Mảng', 'Pà Thẻn', 'Cơ Lao', 'Cống', 'Bố Y', 'Si La', 'Pu Péo', 'Brâu', 'Ơ Đu', 'Rơ Măm', 'Khác'];
+var TON_GIAO = ['Không', 'Phật giáo', 'Công giáo', 'Tin Lành', 'Cao Đài', 'Phật giáo Hòa Hảo', 'Hồi giáo', 'Khác'];
+var TINH = ['TP. Hà Nội', 'TP. Hồ Chí Minh', 'TP. Hải Phòng', 'TP. Đà Nẵng', 'TP. Cần Thơ', 'TP. Huế', 'An Giang', 'Bắc Ninh', 'Cà Mau', 'Cao Bằng', 'Đắk Lắk', 'Điện Biên', 'Đồng Nai', 'Đồng Tháp', 'Gia Lai', 'Hà Tĩnh', 'Hưng Yên', 'Khánh Hòa', 'Lai Châu', 'Lâm Đồng', 'Lạng Sơn', 'Lào Cai', 'Nghệ An', 'Ninh Bình', 'Phú Thọ', 'Quảng Ngãi', 'Quảng Ninh', 'Quảng Trị', 'Sơn La', 'Tây Ninh', 'Thái Nguyên', 'Thanh Hóa', 'Tuyên Quang', 'Vĩnh Long', 'Nước ngoài'];
+var NUOC = ['Hoa Kỳ', 'Úc', 'Canada', 'Pháp', 'Đức', 'Anh', 'Nhật Bản', 'Hàn Quốc', 'Trung Quốc', 'Đài Loan (Trung Quốc)', 'Hồng Kông (Trung Quốc)', 'Singapore', 'Thái Lan', 'Malaysia', 'Lào', 'Campuchia', 'Nga', 'Séc', 'Ba Lan', 'Hà Lan', 'Thụy Sĩ', 'New Zealand'];
+var NGHE = ['Cán bộ hưu trí', 'Công chức', 'Viên chức', 'Nhân viên văn phòng', 'Nhân viên ngân hàng', 'Giáo viên', 'Bác sĩ', 'Kỹ sư', 'Công nhân', 'Nông dân', 'Ngư dân', 'Buôn bán nhỏ', 'Kinh doanh tự do', 'Nội trợ', 'Tài xế', 'Bảo vệ', 'Bộ đội', 'Công an', 'Học sinh', 'Sinh viên', 'Còn nhỏ', 'Già, mất sức lao động'];
+var NOI_CAP = ['Cục Cảnh sát quản lý hành chính về trật tự xã hội', 'Bộ Công an', 'Công an tỉnh, thành phố', 'Cục Quản lý xuất nhập cảnh', 'Khác'];
+var DIEN = ['Đoàn tụ gia đình, bảo lãnh', 'Kết hôn', 'Du học', 'Lao động, làm việc', 'Định cư theo diện tay nghề, đầu tư', 'Vượt biên', 'Chương trình HO', 'Khác'];
+var THAI_DO = 'Luôn chấp hành nghiêm túc các chủ trương, đường lối của Đảng, chính sách, pháp luật của Nhà nước và quy định của địa phương nơi cư trú.';
+var BC_IV = [
+  'Có cha, mẹ đẻ, người trực tiếp nuôi dưỡng của bản thân; vợ hoặc chồng; cha, mẹ đẻ, người trực tiếp nuôi dưỡng của vợ hoặc chồng; con ruột, con nuôi theo quy định của pháp luật; anh chị em ruột sinh sống, định cư ở nước ngoài',
+  'Có con ruột, con nuôi theo quy định của pháp luật kết hôn với người nước ngoài, người Việt Nam định cư ở nước ngoài',
+  'Được cá nhân, tổ chức nước ngoài tặng tiền, hàng, hiện vật có giá trị từ 50 triệu đồng trở lên',
+  'Cho cá nhân, tổ chức nước ngoài thuê tài sản',
+  'Có vợ hoặc chồng, con ruột, con nuôi theo quy định của pháp luật học ở nước ngoài',
+  'Nhận lời mời ra nước ngoài hoặc làm việc với cá nhân, tổ chức nước ngoài dưới mọi hình thức, trừ trường hợp thực hiện nhiệm vụ được cơ quan có thẩm quyền giao',
+  'Liên doanh, liên kết, đầu tư vốn dưới mọi hình thức với cá nhân, tổ chức nước ngoài, người Việt Nam định cư ở nước ngoài',
+  'Nhận huân chương, huy chương, giải thưởng, học hàm, học vị hoặc các danh hiệu khác của nước ngoài không thuộc hiệp định hợp tác giữa hai nhà nước, chương trình hợp tác giữa Đảng Cộng sản Việt Nam với các đảng chính trị của các quốc gia khác',
+  'Kết hôn với người nước ngoài; làm thủ tục xuất cảnh để sinh sống, định cư ở nước ngoài',
+  'Ra nước ngoài theo lời mời của cá nhân, tổ chức nước ngoài, người Việt Nam định cư ở nước ngoài hoặc ra nước ngoài về việc riêng',
+  'Khi bị cá nhân, tổ chức nước ngoài lôi kéo, mua chuộc, khống chế; vô ý để lộ, lọt thông tin, mất tài liệu mật'
+];
+
+/* Mối quan hệ theo Mục III mẫu 367: [mã, nhãn, nhóm, nhãn trong văn bản] */
+var RELS = [
+  ['self', 'Bản thân (nhân vật trung tâm)', 'S'],
+  ['spouse', '{S}', 'A1'],
+  ['child', 'Con ruột', 'A2'], ['child_adopt', 'Con nuôi', 'A2'], ['child_dau', 'Con dâu', 'A2'], ['child_re', 'Con rể', 'A2'],
+  ['father', 'Cha đẻ', 'A31'], ['mother', 'Mẹ đẻ', 'A32'], ['guardian', 'Người trực tiếp nuôi dưỡng', 'A33'],
+  ['sib_anh', 'Anh ruột', 'A34'], ['sib_chi', 'Chị ruột', 'A34'], ['sib_em', 'Em ruột', 'A34'],
+  ['sp_father', 'Cha {s}', 'A41'], ['sp_mother', 'Mẹ {s}', 'A42'], ['sp_guardian', 'Người trực tiếp nuôi dưỡng của {s}', 'A43', 'Người trực tiếp nuôi dưỡng'],
+  ['sp_anh', 'Anh {s}', 'A44'], ['sp_chi', 'Chị {s}', 'A44'], ['sp_em', 'Em {s}', 'A44'],
+  ['ong_noi', 'Ông nội', 'B1N'], ['ba_noi', 'Bà nội', 'B1N'], ['bac_noi', 'Bác (bên nội)', 'B1N', 'Bác'], ['chu', 'Chú', 'B1N'], ['co', 'Cô', 'B1N'],
+  ['ong_ngoai', 'Ông ngoại', 'B1G'], ['ba_ngoai', 'Bà ngoại', 'B1G'], ['bac_ngoai', 'Bác (bên ngoại)', 'B1G', 'Bác'], ['cau', 'Cậu', 'B1G'], ['di', 'Dì', 'B1G'],
+  ['sp_ong_noi', 'Ông nội của {s}', 'B2N', 'Ông nội'], ['sp_ba_noi', 'Bà nội của {s}', 'B2N', 'Bà nội'], ['sp_bac_noi', 'Bác bên nội của {s}', 'B2N', 'Bác'], ['sp_chu', 'Chú của {s}', 'B2N', 'Chú'], ['sp_co', 'Cô của {s}', 'B2N', 'Cô'],
+  ['sp_ong_ngoai', 'Ông ngoại của {s}', 'B2G', 'Ông ngoại'], ['sp_ba_ngoai', 'Bà ngoại của {s}', 'B2G', 'Bà ngoại'], ['sp_bac_ngoai', 'Bác bên ngoại của {s}', 'B2G', 'Bác'], ['sp_cau', 'Cậu của {s}', 'B2G', 'Cậu'], ['sp_di', 'Dì của {s}', 'B2G', 'Dì']
+];
+var REL = {}; RELS.forEach(function (r, i) { REL[r[0]] = r; r.idx = i; });
+var REL_GROUPS = [
+  ['Nhân vật trung tâm', ['S']],
+  ['Thân nhân chủ yếu', ['A1', 'A2', 'A3']],
+  ['Thân tộc của nhân vật trung tâm (bên nội, bên ngoại)', ['B1']],
+  ['Gia đình bên {s}', ['A4']],
+  ['Thân tộc bên {s}', ['B2']]
+];
+var SCOPES = [['S', 'Bản thân nhân vật trung tâm'], ['A1', 'Vợ hoặc chồng'], ['A2', 'Các con (ruột, nuôi, dâu, rể)'], ['A3', 'Cha mẹ đẻ, người nuôi dưỡng, anh chị em ruột'], ['B1', 'Thân tộc của bản thân (ông bà, bác, chú, cô, cậu, dì)'], ['A4', 'Cha mẹ, người nuôi dưỡng, anh chị em bên vợ (chồng)'], ['B2', 'Thân tộc bên vợ (chồng)']];
+function spWord(sp, cap) { var w = sp === 'vo' ? 'vợ' : sp === 'chong' ? 'chồng' : 'vợ (chồng)'; return cap ? w.charAt(0).toUpperCase() + w.slice(1) : w; }
+function spFill(s, sp) { return s.replace('{S}', spWord(sp, 1)).replace('{s}', spWord(sp)); }
+function relLabel(code, sp, doc) { var r = REL[code]; if (!r) return code || ''; return spFill((doc && r[3]) || r[1], sp); }
+function relAllowed(code, scopes) { var r = REL[code]; if (!r) return false; return (scopes || []).some(function (g) { return r[2].indexOf(g) === 0; }); }
+
+/* ================= Tiện ích ================= */
+function esc(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+function nl(s) { return esc(s).replace(/\r?\n/g, '<br>'); }
+function fold(s) { return String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/đ/g, 'd').replace(/Đ/g, 'D'); }
+function slug(s) { return fold(s).replace(/[^A-Za-z0-9]+/g, '-').replace(/^-|-$/g, ''); }
+function val(o, k) { var v = o ? o[k] : ''; if (v === 'Khác') v = o[k + '_k'] || ''; return (v == null ? '' : String(v)).trim(); }
+function addr(o, k) {
+  var a = val(o, k), t = (o && o[k + 'T']) || '';
+  if (!t || t === 'Nước ngoài') return a;
+  if (!a) return t;
+  var c = function (x) { return fold(x).toLowerCase().replace(/[^a-z0-9]/g, ''); };
+  return c(a).indexOf(c(t).replace(/^tp/, '')) >= 0 ? a : a + ', ' + t;
+}
+function dateWord(s) { return s.length >= 10 ? 'ngày' : s.length >= 7 ? 'tháng' : 'năm'; }
+function today() { var d = new Date(); return ('0' + d.getDate()).slice(-2) + '/' + ('0' + (d.getMonth() + 1)).slice(-2) + '/' + d.getFullYear(); }
+function stamp() { var d = new Date(); return d.getFullYear() + ('0' + (d.getMonth() + 1)).slice(-2) + ('0' + d.getDate()).slice(-2); }
+function h(tag, a, c) {
+  var e = document.createElement(tag), k;
+  if (a) for (k in a) {
+    if (k === 'class') e.className = a[k];
+    else if (k.slice(0, 2) === 'on') e[k] = a[k];
+    else if (k === 'html') e.innerHTML = a[k];
+    else if (a[k] !== false && a[k] != null) e.setAttribute(k, a[k] === true ? '' : a[k]);
+  }
+  (Array.isArray(c) ? c : [c]).forEach(function (x) { if (x == null || x === false) return; e.appendChild(typeof x === 'string' ? document.createTextNode(x) : x); });
+  return e;
+}
+function download(name, content, mime) {
+  var b = new Blob([content], { type: mime }), a = document.createElement('a');
+  a.href = URL.createObjectURL(b); a.download = name; document.body.appendChild(a); a.click();
+  setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 800);
+}
+function idWarn(loai, so, p) {
+  so = normId(so); if (!so) return '';
+  if (loai === 'CCCD') {
+    if (!/^\d{12}$/.test(so)) return 'Số CCCD phải gồm đúng 12 chữ số';
+    if (p) {
+      var c = +so.charAt(3), y = (p.ngaySinh || '').slice(-4);
+      if (y.length === 4 && (so.substr(4, 2) !== y.slice(2) || Math.floor(c / 2) !== Math.floor((+y - 1900) / 100))) return 'Số CCCD chưa khớp với năm sinh (chữ số thứ 5 và 6 của CCCD là hai số cuối của năm sinh), vui lòng kiểm tra lại';
+      if (p.gioiTinh && (c % 2 === 0) !== (p.gioiTinh === 'Nam')) return 'Số CCCD chưa khớp với giới tính, vui lòng kiểm tra lại';
+    }
+  } else if (loai === 'CMND') { if (!/^(\d{9}|\d{12})$/.test(so)) return 'Số CMND phải gồm 9 hoặc 12 chữ số'; }
+  else if (loai === 'Hộ chiếu') { if (!/^[A-Z0-9]{6,12}$/.test(so)) return 'Số hộ chiếu gồm từ 6 đến 12 ký tự chữ và số'; }
+  return '';
+}
+
+/* ================= Dựng văn bản theo mẫu 367 ================= */
+var D = '……………………';
+var DOC_CSS = '.doc{font-family:"Times New Roman",Times,serif;font-size:13pt;line-height:1.35;color:#000}.doc ul{margin:0 0 4pt;padding-left:22pt}.doc table.b td,.doc table.b th{font-size:12pt}';
+
+function tbl(heads, rows) {
+  return '<table class="b"><tr>' + heads.map(function (x) { return '<th>' + esc(x) + '</th>'; }).join('') + '</tr>' +
+    rows.map(function (r) { return '<tr>' + r.map(function (x) { return '<td>' + nl(x) + '</td>'; }).join('') + '</tr>'; }).join('') + '</table>';
+}
+function span(r) { var a = (r.tu || '').trim(), b = (r.den || '').trim(); return a && b ? a + ' – ' + b : a || b; }
+function rowsOf(a, keys) { return (a || []).filter(function (r) { return keys.some(function (k) { return (r[k] || '').trim(); }); }); }
+
+function personDoc(p, sp) {
+  var L = [], s, v = function (k) { return val(p, k); };
+  s = p.ngaySinh ? 'Sinh ' + dateWord(p.ngaySinh) + ' ' + p.ngaySinh : '';
+  var ns = addr(p, 'noiSinh'); if (ns) s += (s ? ' ' : 'Sinh ') + 'tại ' + ns;
+  if (v('gioiTinh')) s += (s ? '; ' : '') + 'Giới tính: ' + v('gioiTinh');
+  if (s) L.push(esc(s));
+  var qq = addr(p, 'queQuan'); if (qq) L.push('Quê quán: ' + esc(qq));
+  s = [];
+  if (v('quocTich')) s.push('Quốc tịch: ' + v('quocTich'));
+  if (v('danToc')) s.push('Dân tộc: ' + v('danToc'));
+  if (v('tonGiao')) s.push('Tôn giáo: ' + v('tonGiao'));
+  if (s.length) L.push(esc(s.join('; ')));
+  if (v('tonGiao') && v('tonGiao') !== 'Không' && v('tonGiaoCT')) L.push('Chức sắc, chức việc, nơi sinh hoạt tôn giáo: ' + nl(v('tonGiaoCT')));
+  if (p.gtLoai === 'Không có') L.push('Giấy tờ tùy thân: Không có' + (v('gtLyDo') ? ' (' + esc(v('gtLyDo')) + ')' : ''));
+  else if (v('gtSo')) L.push(esc('Số ' + (p.gtLoai || 'CCCD') + ': ' + normId(v('gtSo')) + (p.gtNgay ? ', cấp ngày ' + p.gtNgay : '') + (v('gtNoi') ? ', nơi cấp: ' + v('gtNoi') : '')));
+  s = [];
+  if (v('ngheNghiep')) s.push('Nghề nghiệp: ' + v('ngheNghiep'));
+  if (v('chucVu')) s.push('Chức vụ: ' + v('chucVu'));
+  if (v('donVi')) s.push('Đơn vị công tác: ' + v('donVi'));
+  if (s.length) L.push(esc(s.join('; ')));
+  if (p.dangVien === 'Có') L.push('Là đảng viên Đảng Cộng sản Việt Nam' + (v('dvCT') ? ' (' + esc(v('dvCT')) + ')' : ''));
+  if (p.tinhTrang === 'Đã mất') L.push(esc('Hiện nay: Đã mất' + (p.namMat ? ' năm ' + p.namMat : '') + (v('matCT') ? ' (' + v('matCT') + ')' : '')));
+  else { var no = addr(p, 'noiO'); if (no) L.push('Nơi ở hiện nay: ' + esc(no)); }
+  if (v('noiOTruoc')) L.push('Nơi cư trú trước đây: ' + nl(v('noiOTruoc')));
+  var ls = rowsOf(p.lichSu, ['tu', 'den', 'nd']);
+  if (ls.length) L.push('Đặc điểm lịch sử qua từng giai đoạn:' + tbl(['Thời gian', 'Làm gì, chức vụ, đơn vị, ở đâu'], ls.map(function (r) { return [span(r), r.nd || '']; })));
+  if (p.cheDoCu === 'Có') L.push('Làm việc, tham gia tổ chức của chế độ cũ: ' + nl(v('cheDoCuCT') || D));
+  if (p.caiTao === 'Có') L.push('Học tập cải tạo sau ngày 30/4/1975: ' + nl(v('caiTaoCT') || D));
+  if (p.nn && p.nn !== 'Không') {
+    s = [p.nn];
+    if (v('nnNuoc')) s.push('tại ' + v('nnNuoc'));
+    if (p.nnNam) s.push('đi năm ' + p.nnNam);
+    if (v('nnDien')) s.push('diện: ' + v('nnDien'));
+    if (v('nnQuocTich')) s.push('quốc tịch: ' + v('nnQuocTich'));
+    if (v('nnNghe')) s.push('nghề nghiệp: ' + v('nnNghe'));
+    if (v('nnDiaChi')) s.push('địa chỉ cư ngụ: ' + v('nnDiaChi'));
+    if (v('nnKinhPhi')) s.push('kinh phí du học: ' + v('nnKinhPhi'));
+    if (v('nnTruong')) s.push('trường học: ' + v('nnTruong'));
+    if (v('nnVe')) s.push('thời gian về Việt Nam: ' + v('nnVe'));
+    if (v('nnGiayTo')) s.push(v('nnGiayTo').toLowerCase());
+    L.push('Ở nước ngoài: ' + esc(s.join('; ')));
+  }
+  L.push(p.dangPhai === 'Có' ? 'Tham gia đảng phái chính trị: ' + nl(v('dangPhaiCT') || D) : 'Không tham gia đảng phái chính trị nào.');
+  L.push(p.tu === 'Có' ? 'Bị tù, tiền án, tiền sự: ' + nl(v('tuCT') || D) : 'Không có tiền án, tiền sự.');
+  if (v('thaiDo')) L.push('Thái độ chính trị: ' + esc(v('thaiDo')));
+  var name = relLabel(p.rel, sp, true) + (v('thu') ? ' (' + v('thu') + ')' : '') + ': ' + (v('hoTen') || D);
+  return '<p class="pn">' + esc(name) + '</p><ul>' + L.map(function (x) { return '<li>' + x + '</li>'; }).join('') + '</ul>';
+}
+
+var SECS = [
+  { pre: 'A', t: 'h5', h: 'A. Thân nhân chủ yếu' },
+  { g: 'A1', t: 'h6', h: '1. {S}' },
+  { g: 'A2', t: 'h6', h: '2. Các con, gồm: con ruột, con nuôi (theo quy định pháp luật), con dâu (rể)' },
+  { pre: 'A3', t: 'h6', h: '3. Cha, mẹ đẻ, người trực tiếp nuôi dưỡng của bản thân' },
+  { g: 'A31', t: 'p', h: '3.1. Cha' }, { g: 'A32', t: 'p', h: '3.2. Mẹ' }, { g: 'A33', t: 'p', h: '3.3. Người trực tiếp nuôi dưỡng' }, { g: 'A34', t: 'p', h: '3.4. Anh chị em ruột' },
+  { pre: 'A4', t: 'h6', h: '4. Cha, mẹ, người trực tiếp nuôi dưỡng của {s}' },
+  { g: 'A41', t: 'p', h: '4.1. Cha' }, { g: 'A42', t: 'p', h: '4.2. Mẹ' }, { g: 'A43', t: 'p', h: '4.3. Người trực tiếp nuôi dưỡng' }, { g: 'A44', t: 'p', h: '4.4. Anh chị em {s}' },
+  { pre: 'B', t: 'h5', h: 'B. Quan hệ thân tộc' },
+  { pre: 'B1', t: 'h6', h: '1. Quan hệ thân tộc của bản thân (ông, bà nội, ngoại; bác, chú, cô, cậu, dì)' },
+  { g: 'B1N', t: 'p', h: 'Bên nội' }, { g: 'B1G', t: 'p', h: 'Bên ngoại' },
+  { pre: 'B2', t: 'h6', h: '2. Quan hệ thân tộc của {s} (ông, bà nội, ngoại; bác, chú, cô, cậu, dì)' },
+  { g: 'B2N', t: 'p', h: 'Bên nội' }, { g: 'B2G', t: 'p', h: 'Bên ngoại' }
+];
+function sortPeople(a) {
+  return a.slice().sort(function (x, y) {
+    var d = (REL[x.rel] ? REL[x.rel].idx : 99) - (REL[y.rel] ? REL[y.rel].idx : 99);
+    return d || ((x.ngaySinh || '').slice(-4) || '9999').localeCompare((y.ngaySinh || '').slice(-4) || '9999');
+  });
+}
+function sec3Doc(people, sp, showEmpty) {
+  var out = '', grp = function (p) { return REL[p.rel] ? REL[p.rel][2] : ''; };
+  SECS.forEach(function (s) {
+    var key = s.g || s.pre, list = sortPeople(people.filter(function (p) { return grp(p).indexOf(key) === 0; }));
+    if (!list.length && !showEmpty) return;
+    var head = esc(spFill(s.h, sp));
+    out += s.t === 'p' ? '<p class="pn it">' + head + '</p>' : '<' + s.t + '>' + head + '</' + s.t + '>';
+    if (s.g) out += list.length ? list.map(function (p) { return personDoc(p, sp); }).join('') : '<p>(Chưa kê khai) ' + D + D + '</p>';
+  });
+  return out;
+}
+function selfDoc12(self) {
+  var a = self.s1 || {}, b = self.s2 || {}, v = function (k) { return esc(val(a, k) || D); }, o = '';
+  var dd = function (k) { return esc(a[k] || D); };
+  var ns = (a.ngaySinh || '').split('/');
+  o += '<h5>I. BẢN THÂN</h5>';
+  var L = [
+    'Họ và tên khai sinh: ' + v('hoTen') + '. Nam, nữ: ' + v('gioiTinh'),
+    'Tên thường gọi: ' + v('tenGoi'),
+    'Bí danh: ' + v('biDanh'),
+    ns.length === 3 ? 'Sinh ngày ' + ns[0] + ' tháng ' + ns[1] + ' năm ' + ns[2] : 'Sinh ngày: ' + dd('ngaySinh'),
+    'Nơi sinh (xã, huyện, tỉnh): ' + esc(addr(a, 'noiSinh') || D),
+    'Nguyên quán (xã, huyện, tỉnh): ' + esc(addr(a, 'nguyenQuan') || D),
+    'Nơi ở hiện nay: ' + esc(addr(a, 'noiO') || D),
+    'Số ' + esc(a.gtLoai || 'CCCD/Hộ chiếu') + ': ' + esc(normId(a.gtSo) || D) + ', ngày cấp: ' + dd('gtNgay') + ', nơi cấp: ' + v('gtNoi'),
+    'Điện thoại liên lạc: CQ: ' + v('dtCQ') + '; DĐ: ' + v('dtDD'),
+    'Dân tộc: ' + v('danToc') + '; tôn giáo: ' + v('tonGiao') + (val(a, 'tonGiaoCT') ? ' (' + nl(val(a, 'tonGiaoCT')) + ')' : ''),
+    'Trình độ học vấn:<br>+ Giáo dục phổ thông: ' + v('gdpt') + '; lý luận chính trị (sơ, trung, cao cấp): ' + v('llct') + '<br>+ Chuyên môn kỹ thuật (học hàm, bằng cấp): ' + v('chuyenMon'),
+    'Ngày tham gia công tác: ' + dd('ngayCT') + '. Làm việc gì? Trong tổ chức nào? ' + v('viecCT'),
+    'Ngày nhập ngũ: ' + dd('ngayNN') + '; ngày chuyển ngành: ' + dd('ngayCN') + '; quân hàm: ' + v('quanHam'),
+    'Ngày được tuyển dụng: ' + dd('ngayTD') + '; cơ quan tuyển dụng: ' + v('coQuanTD'),
+    'Ngày vào Đảng Cộng sản Việt Nam: ' + dd('ngayVD') + '; ngày chính thức: ' + dd('ngayCThuc') + '; tại chi bộ: ' + v('chiBo'),
+    'Chức vụ hiện tại (Đảng, chính quyền, đoàn thể): ' + v('chucVu')
+  ];
+  o += '<ul>' + L.map(function (x) { return '<li>' + x + '</li>'; }).join('') + '</ul>';
+  o += '<h5>II. QUÁ TRÌNH HOẠT ĐỘNG CỦA BẢN THÂN</h5>';
+  var r;
+  o += '<h6>A. Trước khi được tuyển dụng vào cơ quan Đảng, Nhà nước, đoàn thể</h6>';
+  r = rowsOf(b.truocTD, ['tu', 'den', 'nd']);
+  o += r.length ? tbl(['Thời gian', 'Học tập tại trường nào, ngành gì, ở đâu; hoặc làm công việc gì, trong cơ quan, đơn vị, tổ chức nào, ở đâu'], r.map(function (x) { return [span(x), x.nd || '']; })) : '<p>' + D + D + D + '</p>';
+  o += '<h6>B. Quá trình công tác (từ khi được tuyển dụng hoặc tham gia cách mạng)</h6>';
+  r = rowsOf(b.congTac, ['tu', 'den', 'nd']);
+  o += r.length ? tbl(['Thời gian', 'Chức danh, chức vụ Đảng, chính quyền, đoàn thể; tên cơ quan, đơn vị, tổ chức'], r.map(function (x) { return [span(x), x.nd || '']; })) : '<p>' + D + D + D + '</p>';
+  o += '<h6>C. Đã đi nước ngoài</h6>';
+  r = rowsOf(b.nuocNgoai, ['tg', 'nuoc']);
+  o += r.length ? tbl(['Thời gian', 'Nước đến', 'Mục đích', 'Kinh phí', 'Ghi chú'], r.map(function (x) { return [x.tg || '', x.nuoc || '', x.mucDich || '', x.kinhPhi || '', x.gc || '']; })) : '<p>Không</p>';
+  o += '<h6>D. Khen thưởng, kỷ luật, tiền án, tiền sự</h6>';
+  r = rowsOf(b.khenThuong, ['nam', 'hinhThuc']);
+  o += '<p>Khen thưởng: ' + (r.length ? '</p>' + tbl(['Năm', 'Hình thức khen thưởng', 'Cấp quyết định'], r.map(function (x) { return [x.nam || '', x.hinhThuc || '', x.cap || '']; })) : 'Không</p>');
+  r = rowsOf(b.kyLuat, ['nam', 'hinhThuc']);
+  o += '<p>Kỷ luật: ' + (r.length ? '</p>' + tbl(['Năm', 'Hình thức, lý do', 'Cấp quyết định'], r.map(function (x) { return [x.nam || '', x.hinhThuc || '', x.cap || '']; })) : 'Không</p>');
+  o += '<p>Tiền án, tiền sự: ' + (b.tienAn === 'Có' ? nl(val(b, 'tienAnCT') || D) : 'Không') + '</p>';
+  return o;
+}
+function selfDoc4(self) {
+  var c = (self && self.s4) || null, o = '<h5>IV. NHỮNG VẤN ĐỀ PHẢI BÁO CÁO CẤP ỦY (theo Điều 22 Quy định số 367-QĐ/TW ngày 04 tháng 9 năm 2025 của Bộ Chính trị)</h5>';
+  BC_IV.forEach(function (t, i) {
+    var k = 'b' + (i + 1), a = !c ? D : c[k] === 'Có' ? 'Có. ' + (val(c, k + 'CT') || D) : 'Không';
+    o += '<p>' + (i + 1) + '. ' + esc(t) + ': <b>' + nl(a) + '</b></p>';
+  });
+  return o;
+}
+var BLANK_SELF = { s1: {}, s2: {} };
+function buildDoc(data, mode) {
+  var sp = data.sp, o = '', self = data.self;
+  if (mode === 'full') {
+    var a = (self && self.s1) || {};
+    o += '<p>Cơ quan, đơn vị: ' + esc(val(a, 'coQuan') || D) + '</p>';
+    o += '<p class="t">BÁO CÁO</p><p class="c"><b>Về vấn đề chính trị của cán bộ, đảng viên, người có nguyện vọng vào Đảng<br>theo Quy định số 367-QĐ/TW ngày 04 tháng 9 năm 2025 của Bộ Chính trị</b></p>';
+    if (val(a, 'mucDich')) o += '<p class="c it">(Mục đích: ' + esc(val(a, 'mucDich')) + ')</p>';
+    o += '<p class="c">_____________</p>';
+    o += selfDoc12(self || BLANK_SELF);
+    o += '<h5>III. QUAN HỆ GIA ĐÌNH</h5>' + sec3Doc(data.people || [], sp, true);
+    o += selfDoc4(self);
+    o += '<table class="s"><tr><td align="center" width="50%" valign="top"><b>XÁC NHẬN</b><br>Bản lý lịch này do đồng chí (anh, chị) ' + D + '<br>khai tại ' + D + D + '<br><br>Ngày …… tháng …… năm ………<br><b>T/M ĐẢNG ỦY</b><br><i>(Ký tên, đóng dấu)</i></td>' +
+      '<td align="center" width="50%" valign="top">Ngày …… tháng …… năm ………<br><b>Người báo cáo</b><br><i>(Ký, ghi rõ họ tên)</i><br><br><br><br>' + esc(val(a, 'hoTen') || data.subjectName || '') + '</td></tr></table>';
+  } else {
+    var d = data.declarant || {}, me = (data.people || [])[0] || {};
+    o += '<p class="t">PHIẾU CUNG CẤP THÔNG TIN THÂN NHÂN</p>';
+    o += '<p class="c"><b>Phục vụ Báo cáo về vấn đề chính trị theo Quy định số 367-QĐ/TW<br>ngày 04 tháng 9 năm 2025 của Bộ Chính trị</b></p><p class="c">_____________</p>';
+    o += '<p>Cán bộ, đảng viên, người có nguyện vọng vào Đảng: <b>' + esc(data.subjectName || D) + '</b></p>';
+    o += '<p>Người kê khai: <b>' + esc(val(me, 'hoTen') || D) + '</b>; quan hệ với người nêu trên: <b>' + esc(relLabel(d.rel, sp)) + '</b>' + (val(d, 'dienThoai') ? '; điện thoại: ' + esc(val(d, 'dienThoai')) : '') + '</p>';
+    o += '<h5>III. QUAN HỆ GIA ĐÌNH</h5>' + sec3Doc(data.people || [], sp, false);
+    o += '<p style="margin-top:10pt">Tôi cam đoan những nội dung kê khai trên là đúng sự thật và chịu trách nhiệm về nội dung đã kê khai.</p>';
+    o += '<table class="s"><tr><td width="50%"></td><td align="center" width="50%" valign="top">Ngày …… tháng …… năm ………<br><b>Người kê khai</b><br><i>(Ký, ghi rõ họ tên)</i><br><br><br><br>' + esc(val(me, 'hoTen')) + '</td></tr></table>';
+  }
+  return inl(o);
+}
+/* Gắn định dạng trực tiếp vào từng thẻ để Word, LibreOffice và trình duyệt hiển thị giống nhau */
+function inl(o) {
+  var M = [
+    [/<h5>/g, '<p style="font-weight:bold;margin:12pt 0 4pt">'], [/<\/h5>/g, '</p>'],
+    [/<h6>/g, '<p style="font-weight:bold;margin:8pt 0 3pt">'], [/<\/h6>/g, '</p>'],
+    [/<p class="pn it">/g, '<p style="font-weight:bold;font-style:italic;margin:6pt 0 2pt">'],
+    [/<p class="pn">/g, '<p style="font-weight:bold;margin:6pt 0 2pt">'],
+    [/<p class="t">/g, '<p align="center" style="font-weight:bold;font-size:14pt;margin:10pt 0 2pt">'],
+    [/<p class="c it">/g, '<p align="center" style="font-style:italic;margin:0 0 4pt">'],
+    [/<p class="c">/g, '<p align="center" style="margin:0 0 4pt">'],
+    [/<p>/g, '<p style="margin:0 0 4pt">'],
+    [/<li>/g, '<li style="margin:0 0 2pt">'],
+    [/<table class="b">/g, '<table class="b" border="1" cellspacing="0" cellpadding="4" width="94%" style="border-collapse:collapse">'],
+    [/<table class="s">/g, '<table class="s" border="0" cellspacing="0" cellpadding="4" width="100%" style="margin-top:14pt">'],
+    [/<th>/g, '<th align="center" valign="top">'], [/<td>/g, '<td valign="top">']
+  ];
+  M.forEach(function (m) { o = o.replace(m[0], m[1]); });
+  return o;
+}
+function wordFile(title, body) {
+  return '﻿<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40"><head><meta charset="utf-8"><title>' + esc(title) + '</title>' +
+    '<!' + '--[if gte mso 9]><xml><w:WordDocument><w:View>Print</w:View><w:Zoom>100</w:Zoom></w:WordDocument></xml><![endif]--' + '>' +
+    '<style>@page Section1{size:21cm 29.7cm;margin:2cm 2cm 2cm 3cm}div.Section1{page:Section1}' + DOC_CSS + '</style></head><body style="font-family:\'Times New Roman\',serif;font-size:13pt"><div class="Section1 doc">' + body + '</div></body></html>';
+}
+
+/* Gọi hàm phía máy chủ (Google Apps Script). Chạy được cả khi trang nằm trong Apps Script lẫn khi đặt ở trang web bên ngoài. */
+var API_URL = 'https://script.google.com/macros/s/AKfycbxwqRJ54J8Lrde7RFOxSiab-1tCEjpqEqNZM3SSqPzPt-WtipDyQ__YjTOkfMLOp9i6/exec';
+var IS_GAS = typeof google !== 'undefined' && google.script && google.script.run;
+function call(fn) {
+  var args = Array.prototype.slice.call(arguments, 1);
+  if (IS_GAS) return new Promise(function (res) {
+    var r = google.script.run.withSuccessHandler(function (x) { res(x || { ok: false, msg: 'Máy chủ không trả về kết quả.' }); }).withFailureHandler(function (e) { res({ ok: false, msg: 'Không kết nối được máy chủ: ' + ((e && e.message) || e) }); });
+    r[fn].apply(r, args);
+  });
+  return fetch(API_URL, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify({ fn: fn, args: args }), redirect: 'follow', credentials: 'omit' })
+    .then(function (r) { return r.json(); })
+    .then(function (x) { return x || { ok: false, msg: 'Máy chủ không trả về kết quả.' }; })
+    .catch(function (e) { return { ok: false, msg: 'Không kết nối được máy chủ. Vui lòng kiểm tra mạng và thử lại.' }; });
+}
+</script>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var YN = ['Không', 'Có'];
+  var S = { sub: null, data: null, tab: 0, dirty: false, fails: 0, lockUntil: 0 };
+  var isY = function (k) { return function (o) { return o[k] === 'Có'; }; };
+  var hasId = function (o) { return o.gtLoai !== 'Không có'; };
+  var abroad = function (o) { return o.nn && o.nn !== 'Không'; };
+
+  /* ---------- Cấu trúc trường nhập ---------- */
+  var T3 = [{ k: 'tu', l: 'Từ (tháng/năm)', ph: '05/1984' }, { k: 'den', l: 'Đến (tháng/năm)', ph: '06/1986 hoặc nay' }];
+  var PERSON = [
+    { sec: 'Quan hệ với nhân vật trung tâm' },
+    { k: 'rel', l: 'Mối quan hệ', t: 'rel', req: 1 },
+    { k: 'thu', l: 'Ghi chú quan hệ (nếu cần)', ph: 'Ví dụ: Con thứ nhất, Chị thứ hai' },
+    { sec: 'Thông tin cơ bản' },
+    { k: 'hoTen', l: 'Họ và tên', req: 1, ph: 'Ghi đầy đủ, có dấu' },
+    { k: 'gioiTinh', l: 'Giới tính', t: 'select', opts: ['Nam', 'Nữ'], req: 1 },
+    { k: 'ngaySinh', l: 'Ngày, tháng, năm sinh', t: 'date', req: 1, hint: 'Nếu không rõ ngày, tháng thì chỉ chọn năm sinh.' },
+    { k: 'noiSinh', l: 'Nơi sinh', t: 'addr', ph: 'Xã/phường (hoặc tên nước nếu sinh ở nước ngoài)' },
+    { k: 'queQuan', l: 'Quê quán', t: 'addr', req: 1, ph: 'Xã/phường (hoặc tên nước)' },
+    { k: 'quocTich', l: 'Quốc tịch', t: 'select', opts: ['Việt Nam', 'Khác'], other: 1 },
+    { k: 'danToc', l: 'Dân tộc', t: 'select', opts: DAN_TOC, other: 1, req: 1 },
+    { k: 'tonGiao', l: 'Tôn giáo', t: 'select', opts: TON_GIAO, other: 1, req: 1 },
+    { k: 'tonGiaoCT', l: 'Có giữ chức sắc, chức việc gì không; chức vụ, thời gian và nơi sinh hoạt tôn giáo', t: 'textarea', wide: 1, if: function (o) { return o.tonGiao && o.tonGiao !== 'Không'; } },
+    { sec: 'Giấy tờ tùy thân' },
+    { k: 'gtLoai', l: 'Loại giấy tờ', t: 'select', opts: ['CCCD', 'CMND', 'Hộ chiếu', 'Không có'], re: 1 },
+    { k: 'gtSo', l: 'Số giấy tờ', if: hasId, idchk: 1, ph: 'CCCD gồm 12 chữ số' },
+    { k: 'gtNgay', l: 'Ngày cấp', t: 'date', if: hasId },
+    { k: 'gtNoi', l: 'Nơi cấp', t: 'select', opts: NOI_CAP, other: 1, if: hasId },
+    { k: 'gtLyDo', l: 'Lý do không có giấy tờ', if: function (o) { return !hasId(o); }, ph: 'Ví dụ: đã mất trước khi được cấp CCCD' },
+    { sec: 'Tình trạng hiện nay, nghề nghiệp, nơi ở' },
+    { k: 'tinhTrang', l: 'Tình trạng hiện nay', t: 'select', opts: ['Còn sống', 'Đã mất'], re: 1 },
+    { k: 'namMat', l: 'Năm mất', t: 'year', if: function (o) { return o.tinhTrang === 'Đã mất'; } },
+    { k: 'matCT', l: 'Nguyên nhân, nơi mất', if: function (o) { return o.tinhTrang === 'Đã mất'; }, ph: 'Ví dụ: bệnh, mất tại TP. Hồ Chí Minh' },
+    { k: 'ngheNghiep', l: 'Nghề nghiệp (hiện nay hoặc trước khi nghỉ hưu, trước khi mất)', t: 'data', opts: NGHE, req: 1 },
+    { k: 'chucVu', l: 'Chức vụ' },
+    { k: 'donVi', l: 'Đơn vị công tác', wide: 1 },
+    { k: 'dangVien', l: 'Là đảng viên Đảng Cộng sản Việt Nam', t: 'select', opts: YN, re: 1 },
+    { k: 'dvCT', l: 'Năm kết nạp, chức vụ Đảng, huy hiệu Đảng (nếu có)', if: isY('dangVien') },
+    { k: 'noiO', l: 'Nơi ở hiện nay', t: 'addr', req: 1, wide: 1, ph: 'Số nhà, đường, phường/xã', if: function (o) { return o.tinhTrang !== 'Đã mất'; } },
+    { k: 'noiOTruoc', l: 'Các nơi cư trú trước đây (nếu có)', t: 'textarea', wide: 1 },
+    { sec: 'Đặc điểm lịch sử qua từng giai đoạn', hint: 'Ghi rõ từng giai đoạn: từ năm nào đến năm nào, làm gì, ở đâu, trước và sau ngày 30/4/1975 đến nay.' },
+    { k: 'lichSu', t: 'table', wide: 1, quick: 1, cols: T3.concat([{ k: 'nd', l: 'Làm gì, chức vụ, đơn vị, ở đâu', wide: 1 }]) },
+    { k: 'cheDoCu', l: 'Có làm việc hoặc tham gia tổ chức nào của chế độ cũ không?', t: 'select', opts: YN, re: 1 },
+    { k: 'cheDoCuCT', l: 'Ghi rõ tổ chức, chức vụ, thời gian', t: 'textarea', if: isY('cheDoCu') },
+    { k: 'caiTao', l: 'Có học tập cải tạo sau ngày 30/4/1975 không?', t: 'select', opts: YN, re: 1 },
+    { k: 'caiTaoCT', l: 'Ghi rõ thời gian, địa điểm', t: 'textarea', if: isY('caiTao') },
+    { sec: 'Yếu tố nước ngoài' },
+    { k: 'nn', l: 'Hiện có ở nước ngoài không?', t: 'select', opts: ['Không', 'Sinh sống, định cư', 'Du học', 'Lao động, công tác dài hạn'], re: 1 },
+    { k: 'nnNuoc', l: 'Nước nào', t: 'data', opts: NUOC, if: abroad, req: 1 },
+    { k: 'nnNam', l: 'Đi năm nào', t: 'year', if: abroad },
+    { k: 'nnDien', l: 'Đi theo diện gì', t: 'select', opts: DIEN, other: 1, if: abroad },
+    { k: 'nnQuocTich', l: 'Quốc tịch hiện nay', if: abroad },
+    { k: 'nnNghe', l: 'Nghề nghiệp ở nước ngoài', if: abroad },
+    { k: 'nnDiaChi', l: 'Địa chỉ cư ngụ hiện nay ở nước ngoài', wide: 1, if: abroad },
+    { k: 'nnKinhPhi', l: 'Kinh phí du học', t: 'select', opts: ['Gia đình tự túc', 'Học bổng', 'Cơ quan, tổ chức đài thọ', 'Khác'], other: 1, if: function (o) { return o.nn === 'Du học'; } },
+    { k: 'nnTruong', l: 'Trường học', if: function (o) { return o.nn === 'Du học'; } },
+    { k: 'nnVe', l: 'Thời gian về Việt Nam (dự kiến)', if: function (o) { return o.nn === 'Du học'; } },
+    { k: 'nnGiayTo', l: 'Giấy tờ kèm theo', t: 'select', opts: ['Có kèm bản sao hộ chiếu, giấy tờ liên quan', 'Chưa có giấy tờ kèm theo'], if: abroad },
+    { sec: 'Chính trị, pháp luật' },
+    { k: 'dangPhai', l: 'Có tham gia đảng phái chính trị nào không?', t: 'select', opts: YN, re: 1 },
+    { k: 'dangPhaiCT', l: 'Ghi rõ tên đảng phái, thời gian', t: 'textarea', if: isY('dangPhai') },
+    { k: 'tu', l: 'Có bị tù, tiền án, tiền sự không?', t: 'select', opts: YN, re: 1 },
+    { k: 'tuCT', l: 'Ghi rõ thời gian, lý do', t: 'textarea', if: isY('tu') },
+    { k: 'thaiDo', l: 'Thái độ chính trị', t: 'select', opts: [THAI_DO, 'Khác'], other: 1, wide: 1 }
+  ];
+  var P_DEF = { quocTich: 'Việt Nam', danToc: 'Kinh', tonGiao: 'Không', gtLoai: 'CCCD', tinhTrang: 'Còn sống', dangVien: 'Không', cheDoCu: 'Không', caiTao: 'Không', nn: 'Không', dangPhai: 'Không', tu: 'Không', thaiDo: THAI_DO };
+
+  var SEC1 = [
+    { sec: 'Thông tin chung của báo cáo' },
+    { k: 'coQuan', l: 'Cơ quan, đơn vị', req: 1, wide: 1 },
+    { k: 'mucDich', l: 'Mục đích báo cáo', t: 'select', opts: ['Bổ sung lý lịch đảng viên', 'Xem xét kết nạp Đảng', 'Bổ nhiệm, giới thiệu ứng cử', 'Quy hoạch cán bộ', 'Khác'], other: 1, wide: 1 },
+    { sec: 'I. Bản thân' },
+    { k: 'hoTen', l: 'Họ và tên khai sinh', req: 1 },
+    { k: 'gioiTinh', l: 'Giới tính', t: 'select', opts: ['Nam', 'Nữ'], req: 1 },
+    { k: 'tenGoi', l: 'Tên thường gọi', ph: 'Nếu không có, ghi: Không' },
+    { k: 'biDanh', l: 'Bí danh', ph: 'Nếu không có, ghi: Không' },
+    { k: 'ngaySinh', l: 'Ngày, tháng, năm sinh', t: 'date', req: 1 },
+    { k: 'noiSinh', l: 'Nơi sinh (xã, huyện, tỉnh)', t: 'addr', req: 1 },
+    { k: 'nguyenQuan', l: 'Nguyên quán (xã, huyện, tỉnh)', t: 'addr', req: 1 },
+    { k: 'noiO', l: 'Nơi ở hiện nay', t: 'addr', req: 1 },
+    { k: 'gtLoai', l: 'Loại giấy tờ', t: 'select', opts: ['CCCD', 'Hộ chiếu'] },
+    { k: 'gtSo', l: 'Số CCCD/Hộ chiếu', req: 1, idchk: 1 },
+    { k: 'gtNgay', l: 'Ngày cấp', t: 'date' },
+    { k: 'gtNoi', l: 'Nơi cấp', t: 'select', opts: NOI_CAP, other: 1 },
+    { k: 'dtCQ', l: 'Điện thoại cơ quan' },
+    { k: 'dtDD', l: 'Điện thoại di động', tel: 1 },
+    { k: 'danToc', l: 'Dân tộc', t: 'select', opts: DAN_TOC, other: 1, req: 1 },
+    { k: 'tonGiao', l: 'Tôn giáo', t: 'select', opts: TON_GIAO, other: 1, req: 1 },
+    { k: 'tonGiaoCT', l: 'Có giữ chức sắc, chức việc gì không; chức vụ, thời gian và nơi sinh hoạt tôn giáo', t: 'textarea', wide: 1, if: function (o) { return o.tonGiao && o.tonGiao !== 'Không'; } },
+    { k: 'gdpt', l: 'Giáo dục phổ thông', t: 'select', opts: ['12/12', '10/10', '9/12', 'Khác'], other: 1 },
+    { k: 'llct', l: 'Lý luận chính trị', t: 'select', opts: ['Không', 'Sơ cấp', 'Trung cấp', 'Cao cấp', 'Cử nhân'] },
+    { k: 'chuyenMon', l: 'Chuyên môn kỹ thuật (học hàm, bằng cấp)', wide: 1 },
+    { k: 'ngayCT', l: 'Ngày tham gia công tác', t: 'date' },
+    { k: 'viecCT', l: 'Làm việc gì? Trong tổ chức nào?' },
+    { k: 'ngayNN', l: 'Ngày nhập ngũ (nếu có)', t: 'date' },
+    { k: 'ngayCN', l: 'Ngày chuyển ngành (nếu có)', t: 'date' },
+    { k: 'quanHam', l: 'Quân hàm (nếu có)' },
+    { k: 'ngayTD', l: 'Ngày được tuyển dụng', t: 'date' },
+    { k: 'coQuanTD', l: 'Cơ quan tuyển dụng', wide: 1 },
+    { k: 'ngayVD', l: 'Ngày vào Đảng Cộng sản Việt Nam', t: 'date' },
+    { k: 'ngayCThuc', l: 'Ngày chính thức', t: 'date' },
+    { k: 'chiBo', l: 'Tại chi bộ' },
+    { k: 'chucVu', l: 'Chức vụ hiện tại (Đảng, chính quyền, đoàn thể)', wide: 1 }
+  ];
+  var SEC2 = [
+    { sec: 'A. Trước khi được tuyển dụng vào cơ quan Đảng, Nhà nước, đoàn thể', hint: 'Từ tháng, năm nào đến tháng, năm nào: học tập những trường nào, ngành gì, ở đâu; hoặc làm những công việc gì, trong cơ quan, đơn vị, tổ chức nào, ở đâu.' },
+    { k: 'truocTD', t: 'table', wide: 1, cols: T3.concat([{ k: 'nd', l: 'Học trường nào, ngành gì; hoặc làm việc gì, ở đâu', wide: 1 }]) },
+    { sec: 'B. Quá trình công tác (từ khi được tuyển dụng hoặc tham gia cách mạng)', hint: 'Từ tháng, năm nào đến tháng, năm nào; chức danh, chức vụ Đảng, chính quyền, đoàn thể; tên cơ quan, đơn vị, tổ chức.' },
+    { k: 'congTac', t: 'table', wide: 1, cols: T3.concat([{ k: 'nd', l: 'Chức danh, chức vụ; tên cơ quan, đơn vị', wide: 1 }]) },
+    { sec: 'C. Đã đi nước ngoài', hint: 'Đi nước nào; thời gian; mục đích; kinh phí chuyến đi (kèm giấy tờ liên quan).' },
+    { k: 'nuocNgoai', t: 'table', wide: 1, cols: [{ k: 'tg', l: 'Thời gian', ph: '09/2017' }, { k: 'nuoc', l: 'Nước đến', t: 'data', opts: NUOC }, { k: 'mucDich', l: 'Mục đích', t: 'select', opts: ['Công tác', 'Học tập', 'Tham quan, du lịch', 'Việc riêng', 'Khác'] }, { k: 'kinhPhi', l: 'Kinh phí', t: 'select', opts: ['Tự túc', 'Cơ quan, tổ chức đài thọ', 'Khác'] }, { k: 'gc', l: 'Ghi chú' }] },
+    { sec: 'D. Khen thưởng, kỷ luật, tiền án, tiền sự', hint: 'Ghi cụ thể ngày, tháng, năm, lý do, cấp nào ký (kèm giấy tờ liên quan).' },
+    { k: 'khenThuong', l: 'Khen thưởng', t: 'table', wide: 1, cols: [{ k: 'nam', l: 'Năm', ph: '2017, 2020' }, { k: 'hinhThuc', l: 'Hình thức khen thưởng', wide: 1 }, { k: 'cap', l: 'Cấp quyết định' }] },
+    { k: 'kyLuat', l: 'Kỷ luật (nếu có)', t: 'table', wide: 1, cols: [{ k: 'nam', l: 'Năm' }, { k: 'hinhThuc', l: 'Hình thức, lý do', wide: 1 }, { k: 'cap', l: 'Cấp quyết định' }] },
+    { k: 'tienAn', l: 'Có tiền án, tiền sự không?', t: 'select', opts: YN, re: 1 },
+    { k: 'tienAnCT', l: 'Ghi rõ thời gian, lý do', t: 'textarea', if: isY('tienAn') }
+  ];
+  var SEC4 = [{ sec: 'IV. Những vấn đề phải báo cáo cấp ủy', hint: 'Theo Điều 22 Quy định số 367-QĐ/TW ngày 04/9/2025 của Bộ Chính trị. Chọn Có hoặc Không cho từng nội dung; nếu Có thì ghi rõ.' }];
+  BC_IV.forEach(function (t, i) {
+    var k = 'b' + (i + 1);
+    SEC4.push({ k: k, l: (i + 1) + '. ' + t, t: 'select', opts: YN, re: 1, wide: 1 });
+    SEC4.push({ k: k + 'CT', l: 'Nội dung cụ thể của mục ' + (i + 1), t: 'textarea', wide: 1, req: 1, if: isY(k) });
+  });
+
+  /* ---------- Bộ dựng trường nhập ---------- */
+  var dlN = 0;
+  function sel(opts, v, onch, ph) {
+    var s = h('select', { onchange: function () { onch(s.value); } }, [h('option', { value: '' }, ph || '— Chọn —')]);
+    opts.forEach(function (o) { var op = h('option', { value: o }, o.length > 70 ? o.slice(0, 68) + '…' : o); if (o === v) op.selected = true; s.appendChild(op); });
+    if (v && opts.indexOf(v) < 0) { var x = h('option', { value: v }, v); x.selected = true; s.appendChild(x); }
+    return s;
+  }
+  function txt(o, k, onch, ph, area) {
+    var e = h(area ? 'textarea' : 'input', { placeholder: ph || null });
+    if (!area) e.type = 'text';
+    e.value = o[k] || '';
+    e.oninput = function () { o[k] = e.value; onch(); };
+    return e;
+  }
+  function years(v, onch, ph) { var a = [], y; for (y = new Date().getFullYear(); y >= 1900; y--) a.push(String(y)); return sel(a, v, onch, ph || 'Năm'); }
+  function dateCtl(o, k, onch) {
+    var p = (o[k] || '').split('/'), y = p.length ? p[p.length - 1] : '', m = p.length >= 2 ? p[p.length - 2] : '', d = p.length === 3 ? p[0] : '';
+    var two = function (n) { var a = [], i; for (i = 1; i <= n; i++) a.push(('0' + i).slice(-2)); return a; };
+    var set = function () { o[k] = y ? (d && m ? d + '/' : '') + (m ? m + '/' : '') + y : ''; onch(); };
+    return h('div', { class: 'inline' }, [sel(two(31), d, function (v) { d = v; set(); }, 'Ngày'), sel(two(12), m, function (v) { m = v; set(); }, 'Tháng'), years(y, function (v) { y = v; set(); })]);
+  }
+  function dataCtl(o, k, opts, onch, ph) {
+    var id = 'dl' + (++dlN), e = txt(o, k, onch, ph || 'Chọn hoặc tự ghi');
+    e.setAttribute('list', id);
+    return h('div', null, [e, h('datalist', { id: id }, opts.map(function (x) { return h('option', { value: x }); }))]);
+  }
+  function tableCtl(d, o, onch) {
+    if (!Array.isArray(o[d.k])) o[d.k] = [];
+    var rows = o[d.k], box = h('div');
+    function draw() {
+      box.innerHTML = '';
+      rows.forEach(function (r, i) {
+        var cells = d.cols.map(function (c) {
+          var ctl = c.t === 'select' ? sel(c.opts, r[c.k], function (v) { r[c.k] = v; onch(); }) : c.t === 'data' ? dataCtl(r, c.k, c.opts, onch, c.ph) : txt(r, c.k, onch, c.ph);
+          return h('div', { class: c.wide ? 'wide' : null }, [h('small', null, c.l), ctl]);
+        });
+        cells.push(h('button', { type: 'button', class: 'sm danger', title: 'Xóa dòng', onclick: function () { rows.splice(i, 1); onch(); draw(); } }, '✕'));
+        box.appendChild(h('div', { class: 'trow' }, cells));
+      });
+      var bar = h('div', { class: 'bar' }, [h('button', { type: 'button', class: 'sm', onclick: function () { rows.push({}); onch(); draw(); } }, '＋ Thêm dòng')]);
+      if (d.quick && !rows.length) bar.appendChild(h('button', { type: 'button', class: 'sm', onclick: function () { rows.push({ tu: 'Trước 30/4/1975', den: '' }, { tu: 'Sau 30/4/1975', den: 'nay' }); onch(); draw(); } }, '＋ Thêm nhanh 2 giai đoạn: trước và sau 30/4/1975'));
+      box.appendChild(bar);
+    }
+    draw();
+    return box;
+  }
+  function relCtl(o, k, onch, locked) {
+    var sp = S.sub.sp;
+    if (locked) { var i = h('input', { disabled: true }); i.value = relLabel(o[k], sp); return i; }
+    var s = h('select', { onchange: function () { o[k] = s.value; onch(); } }, [h('option', { value: '' }, '— Chọn mối quan hệ —')]);
+    REL_GROUPS.slice(1).forEach(function (g) {
+      var og = h('optgroup', { label: spFill(g[0], sp) });
+      RELS.forEach(function (r) { if (g[1].some(function (x) { return r[2].indexOf(x) === 0; })) { var op = h('option', { value: r[0] }, spFill(r[1], sp)); if (r[0] === o[k]) op.selected = true; og.appendChild(op); } });
+      s.appendChild(og);
+    });
+    return s;
+  }
+  function renderForm(root, defs, o, changed) {
+    root.innerHTML = '';
+    var grid = null;
+    var again = function () { changed(); renderForm(root, defs, o, changed); };
+    defs.forEach(function (d) {
+      if (d.sec) { root.appendChild(h('h4', { class: 'sec' }, d.sec)); if (d.hint) root.appendChild(h('p', { class: 'hint' }, d.hint)); grid = h('div', { class: 'grid' }); root.appendChild(grid); return; }
+      if (d.if && !d.if(o)) return;
+      var ctl, extra = null, t = d.t || 'text';
+      if (t === 'select') {
+        ctl = sel(d.opts, o[d.k], function (v) { o[d.k] = v; if (d.re || d.other) again(); else changed(); });
+        if (d.other && o[d.k] === 'Khác') extra = txt(o, d.k + '_k', changed, 'Ghi rõ');
+      } else if (t === 'date') ctl = dateCtl(o, d.k, changed);
+      else if (t === 'year') ctl = years(o[d.k], function (v) { o[d.k] = v; changed(); }, '— Chọn năm —');
+      else if (t === 'addr') ctl = h('div', { class: 'inline' }, [h('div', { class: 'grow2' }, txt(o, d.k, changed, d.ph || 'Xã/phường, chi tiết')), sel(TINH, o[d.k + 'T'], function (v) { o[d.k + 'T'] = v; changed(); }, 'Tỉnh/thành phố')]);
+      else if (t === 'data') ctl = dataCtl(o, d.k, d.opts, changed, d.ph);
+      else if (t === 'table') ctl = tableCtl(d, o, changed);
+      else if (t === 'rel') ctl = relCtl(o, d.k, again, o.mine);
+      else if (t === 'textarea') ctl = txt(o, d.k, changed, d.ph, true);
+      else {
+        ctl = txt(o, d.k, changed, d.ph);
+        if (d.idchk) {
+          var er = h('div', { class: 'err' });
+          var chk = function () { er.textContent = idWarn(o.gtLoai, o.gtSo, o); };
+          ctl.addEventListener('blur', chk); chk(); extra = er;
+        }
+      }
+      var kids = [];
+      if (d.l) kids.push(h('label', null, [d.l, d.req ? h('span', { class: 'req' }, ' *') : null]));
+      kids.push(ctl); if (extra) kids.push(extra);
+      if (d.hint) kids.push(h('div', { class: 'hint' }, d.hint));
+      grid.appendChild(h('div', { class: 'fld' + (d.wide || t === 'table' ? ' wide' : '') }, kids));
+    });
+  }
+  function missing(defs, o) {
+    var out = [];
+    defs.forEach(function (d) {
+      if (!d.k || !d.req || (d.if && !d.if(o))) return;
+      var ok = d.t === 'addr' ? (val(o, d.k) || o[d.k + 'T']) : val(o, d.k);
+      if (!ok) out.push(d.l.replace(/\s*\(.*$/, ''));
+    });
+    return out;
+  }
+
+  /* ---------- Xác thực ---------- */
+  function drawLogin() {
+    var rs = $('lgRel'); rs.innerHTML = '';
+    rs.appendChild(h('option', { value: '' }, '— Chọn mối quan hệ của anh/chị —'));
+    REL_GROUPS.forEach(function (g) {
+      var og = h('optgroup', { label: spFill(g[0], '') });
+      RELS.forEach(function (r) { if (g[1].some(function (x) { return r[2].indexOf(x) === 0; })) og.appendChild(h('option', { value: r[0] }, spFill(r[1], ''))); });
+      rs.appendChild(og);
+    });
+    $('lgBtn').onclick = login;
+    $('lgId').onkeydown = function (e) { if (e.key === 'Enter') login(); };
+  }
+  function login() {
+    var msg = $('lgMsg'), id = normId($('lgId').value), rel = $('lgRel').value, btn = $('lgBtn');
+    if (id.length < 6 || !rel) { msg.textContent = 'Vui lòng nhập số giấy tờ của nhân vật trung tâm và chọn mối quan hệ.'; return; }
+    msg.textContent = 'Đang kiểm tra…'; btn.disabled = true;
+    call('apiLogin', id, rel).then(function (r) {
+      btn.disabled = false;
+      if (!r.ok) { msg.textContent = r.msg; return; }
+      msg.textContent = ''; S.sub = r.sub; S.token = r.token; start(rel);
+    });
+  }
+  function newPerson(rel, mine) { var p = { id: uid(), rel: rel || '', mine: !!mine, lichSu: [] }; for (var k in P_DEF) p[k] = P_DEF[k]; return p; }
+  function start(rel) {
+    var sub = S.sub;
+    S.data = { v: 1, kind: 'ds367-phieu', pid: uid(), subjectId: sub.i, subjectName: sub.n, sp: sub.sp, declarant: { rel: rel, dienThoai: '' }, self: null, people: [] };
+    if (rel === 'self') S.data.self = { s1: { hoTen: sub.n, coQuan: sub.u || '', gtLoai: 'CCCD', danToc: 'Kinh', tonGiao: 'Không', mucDich: 'Bổ sung lý lịch đảng viên' }, s2: { tienAn: 'Không' }, s4: {} };
+    else S.data.people.push(newPerson(rel, true));
+    if (S.data.self) BC_IV.forEach(function (t, i) { S.data.self.s4['b' + (i + 1)] = 'Không'; });
+    $('login').hidden = true; $('app').hidden = false;
+    window.onbeforeunload = function (e) { if (S.dirty) { e.preventDefault(); e.returnValue = ''; return ''; } };
+    drawApp();
+  }
+
+  /* ---------- Màn hình kê khai ---------- */
+  function touch() { S.dirty = true; }
+  function isSelf() { return !!S.data.self; }
+  function tabsDef() {
+    return isSelf() ? ['Mục I. Bản thân', 'Mục II. Quá trình hoạt động', 'Mục III. Quan hệ gia đình', 'Mục IV. Báo cáo cấp ủy', 'Xem lại và xuất file'] : ['Kê khai thân nhân', 'Xem lại và xuất file'];
+  }
+  function drawApp() {
+    var d = S.data;
+    $('who').innerHTML = '<span>Kê khai cho đồng chí: <b>' + esc(d.subjectName) + '</b></span><span>Quan hệ của người kê khai: <b>' + esc(relLabel(d.declarant.rel, d.sp)) + '</b></span>';
+    var tb = $('tabs'); tb.innerHTML = '';
+    tabsDef().forEach(function (t, i) { tb.appendChild(h('button', { type: 'button', class: i === S.tab ? 'on' : null, onclick: function () { S.tab = i; drawApp(); window.scrollTo(0, 0); } }, t)); });
+    var pane = $('pane'); pane.innerHTML = '';
+    var n = tabsDef().length, self = isSelf();
+    if (S.tab === n - 1) drawReview(pane);
+    else if (!self || S.tab === 2) drawPeople(pane);
+    else {
+      var card = h('div', { class: 'card' }), body = h('div');
+      card.appendChild(body); pane.appendChild(card);
+      renderForm(body, [SEC1, SEC2, null, SEC4][S.tab], [d.self.s1, d.self.s2, null, d.self.s4][S.tab], touch);
+    }
+    if (S.tab < n - 1) pane.appendChild(h('div', { class: 'bar' }, [h('span', { class: 'sp' }), h('button', { type: 'button', class: 'pri', onclick: function () { S.tab++; drawApp(); window.scrollTo(0, 0); } }, 'Tiếp tục: ' + tabsDef()[S.tab + 1] + ' →')]));
+  }
+  function personTitle(p, i) { return 'Hồ sơ ' + (i + 1) + ': ' + (relLabel(p.rel, S.data.sp) || 'Chưa chọn quan hệ') + (val(p, 'hoTen') ? ' – ' + val(p, 'hoTen') : '') + (p.mine ? ' (người kê khai)' : ''); }
+  function drawPeople(pane) {
+    var d = S.data;
+    if (!isSelf()) {
+      var c = h('div', { class: 'card' }, [h('h3', null, 'Thông tin liên hệ của người kê khai'), h('p', { class: 'mute' }, 'Số điện thoại để chi bộ liên hệ khi cần làm rõ nội dung kê khai.')]);
+      var tel = txt(d.declarant, 'dienThoai', touch, 'Ví dụ: 0903123456'); tel.setAttribute('inputmode', 'tel'); tel.style.maxWidth = '280px';
+      c.appendChild(tel); pane.appendChild(c);
+    }
+    pane.appendChild(h('p', { class: 'mute' }, isSelf() ? 'Anh/chị có thể tự kê khai thân nhân tại đây, hoặc để từng thân nhân tự kê khai bằng form này rồi gộp lại sau.' : 'Hồ sơ 1 là thông tin của chính anh/chị. Anh/chị có thể thêm hồ sơ để kê khai hộ những thân nhân khác (ví dụ: ông bà đã mất, anh chị em không tiện kê khai).'));
+    var list = h('div'); pane.appendChild(list);
+    d.people.forEach(function (p, i) {
+      var sumT = h('span'), badge = h('span');
+      var upd = function () {
+        sumT.textContent = personTitle(p, i);
+        var m = missing(PERSON, p).length; badge.className = 'badge ' + (m ? 'w' : 'ok'); badge.textContent = m ? 'Còn thiếu ' + m + ' mục bắt buộc' : 'Đã đủ mục bắt buộc';
+      };
+      var body = h('div');
+      var det = h('details', { class: 'person' }, [h('summary', null, [sumT, badge]), h('div', { class: 'body' }, [body, h('div', { class: 'bar' }, [
+        h('button', { type: 'button', class: 'sm', title: 'Tạo hồ sơ mới, sao chép sẵn quê quán, dân tộc, tôn giáo, quan hệ', onclick: function () { clone(p); } }, 'Thêm hồ sơ tương tự (sao chép quê quán, dân tộc)'),
+        h('span', { class: 'sp' }),
+        p.mine ? null : h('button', { type: 'button', class: 'sm danger', onclick: function (e) { var b = e.target; if (b.dataset.sure) { d.people.splice(i, 1); touch(); drawApp(); } else { b.dataset.sure = 1; b.textContent = 'Bấm lần nữa để xóa hồ sơ này'; } } }, 'Xóa hồ sơ')
+      ])])]);
+      if (p._open || d.people.length === 1) det.open = true;
+      det.ontoggle = function () { p._open = det.open; };
+      renderForm(body, PERSON, p, function () { touch(); upd(); });
+      upd(); list.appendChild(det);
+    });
+    pane.appendChild(h('div', { class: 'bar' }, [h('button', { type: 'button', onclick: function () { d.people.forEach(function (x) { x._open = false; }); var p = newPerson('', false); p._open = true; d.people.push(p); touch(); drawApp(); } }, '＋ Thêm hồ sơ thân nhân' + (isSelf() ? '' : ' (kê khai hộ)'))]));
+  }
+  function clone(p) {
+    var q = newPerson(p.rel, false);
+    ['queQuan', 'queQuanT', 'quocTich', 'quocTich_k', 'danToc', 'danToc_k', 'tonGiao', 'tonGiao_k'].forEach(function (k) { if (p[k]) q[k] = p[k]; });
+    S.data.people.forEach(function (x) { x._open = false; }); q._open = true;
+    S.data.people.push(q); touch(); drawApp();
+  }
+
+  /* ---------- Xem lại, xuất file ---------- */
+  function problems() {
+    var d = S.data, out = [];
+    if (isSelf()) {
+      [['Mục I', SEC1, d.self.s1], ['Mục IV', SEC4, d.self.s4]].forEach(function (x) { var m = missing(x[1], x[2]); if (m.length) out.push(x[0] + ': còn thiếu ' + m.join('; ')); });
+      var w0 = idWarn(d.self.s1.gtLoai, d.self.s1.gtSo, d.self.s1); if (w0) out.push('Mục I: ' + w0);
+    } else if (!/^0\d{9}$/.test((d.declarant.dienThoai || '').replace(/\D/g, ''))) out.push('Số điện thoại của người kê khai cần gồm 10 chữ số, bắt đầu bằng số 0');
+    d.people.forEach(function (p, i) {
+      var m = missing(PERSON, p), w = p.gtLoai !== 'Không có' ? idWarn(p.gtLoai, p.gtSo, p) : '';
+      if (p.gtLoai !== 'Không có' && !val(p, 'gtSo')) m.push('Số giấy tờ (hoặc chọn loại giấy tờ là "Không có")');
+      if (m.length) out.push(personTitle(p, i) + ': còn thiếu ' + m.join('; '));
+      if (w) out.push(personTitle(p, i) + ': ' + w);
+    });
+    if (!isSelf() && !d.people.length) out.push('Chưa có hồ sơ thân nhân nào');
+    return out;
+  }
+  function cleanData() {
+    var d = JSON.parse(JSON.stringify(S.data));
+    d.people.forEach(function (p) { delete p._open; });
+    d.savedAt = new Date().toISOString();
+    d.declarant.hoTen = isSelf() ? val(d.self.s1, 'hoTen') : val(d.people[0] || {}, 'hoTen');
+    return d;
+  }
+  function fileBase() { var d = cleanData(); return '367_' + slug(d.subjectName) + '_' + slug(relLabel(d.declarant.rel, d.sp)) + '_' + (slug(d.declarant.hoTen) || 'chua-ghi-ten') + '_' + stamp(); }
+  function drawReview(pane) {
+    var d = S.data, pr = problems(), mode = isSelf() ? 'full' : 'phieu';
+    var box = h('div', { class: 'card noprint' });
+    box.appendChild(h('h2', null, 'Xem lại và xuất file'));
+    if (pr.length) box.appendChild(h('div', { class: 'warnbox' }, [h('b', null, 'Còn ' + pr.length + ' nội dung cần bổ sung hoặc kiểm tra lại:'), h('ul', null, pr.map(function (x) { return h('li', null, x); }))]));
+    else box.appendChild(h('div', { class: 'okbox' }, 'Các mục bắt buộc đã được kê khai đầy đủ.'));
+    var ck = h('input', { type: 'checkbox', id: 'camDoan' });
+    box.appendChild(h('p', null, h('label', null, [ck, 'Tôi cam đoan những nội dung kê khai là đúng sự thật và chịu trách nhiệm về nội dung đã kê khai.'])));
+    var bWord = h('button', { type: 'button', disabled: true, onclick: function () { download(fileBase() + '.doc', wordFile('Mẫu 367 - ' + d.subjectName, buildDoc(cleanData(), mode)), 'application/msword'); } }, 'Tải file Word theo mẫu 367');
+    var bPrint = h('button', { type: 'button', disabled: true, onclick: function () { window.print(); } }, 'In hoặc lưu PDF');
+    var bData = h('button', { type: 'button', onclick: function () { download(fileBase() + '.json', JSON.stringify(cleanData(), null, 1), 'application/json'); note.textContent = 'Đã tải file dữ liệu. Lần sau, sau khi xác thực, chọn "Mở file dữ liệu đã lưu" để khai tiếp.'; } }, 'Tải file dữ liệu (để gửi lại hoặc khai tiếp)');
+    var fi = h('input', { type: 'file', accept: '.json,application/json', hidden: true });
+    fi.onchange = function () {
+      var f = fi.files[0]; if (!f) return;
+      var rd = new FileReader();
+      rd.onload = function () {
+        try {
+          var x = JSON.parse(rd.result);
+          if (x.kind !== 'ds367-phieu' || x.subjectId !== S.sub.i) { note.textContent = 'File này không phải file dữ liệu của form, hoặc thuộc về nhân vật trung tâm khác.'; return; }
+          if (!x.pid) x.pid = uid();
+          if (x.declarant.rel !== d.declarant.rel) { note.textContent = 'File này được lập với mối quan hệ khác với mối quan hệ anh/chị vừa chọn khi xác thực.'; return; }
+          S.data = x; S.tab = 0; S.dirty = false; drawApp();
+        } catch (e) { note.textContent = 'Không đọc được file. Vui lòng chọn đúng file .json đã tải trước đó.'; }
+      };
+      rd.readAsText(f);
+    };
+    var bOpen = h('button', { type: 'button', onclick: function () { fi.click(); } }, 'Mở file dữ liệu đã lưu');
+    ck.onchange = function () { bSend.disabled = bWord.disabled = bPrint.disabled = !ck.checked; };
+    var sent = h('div');
+    var bSend = h('button', { type: 'button', class: 'pri', disabled: true, onclick: function () {
+      if (pr.length && !bSend.dataset.sure) { bSend.dataset.sure = 1; bSend.textContent = 'Phiếu còn nội dung chưa đủ. Bấm lần nữa để vẫn gửi'; return; }
+      bSend.disabled = true; sent.className = 'mute'; sent.textContent = 'Đang gửi phiếu…';
+      call('apiSubmit', S.token, cleanData()).then(function (r) {
+        bSend.disabled = false;
+        if (!r.ok) { sent.className = 'warnbox'; sent.textContent = r.msg; return; }
+        S.dirty = false; bSend.textContent = 'Gửi lại phiếu (nếu có chỉnh sửa)';
+        sent.className = 'okbox'; sent.textContent = 'Đã gửi phiếu thành công lúc ' + r.time + ' (mã phiếu: ' + r.pid + ', số hồ sơ thân nhân: ' + r.count + '). Anh/chị có thể tải file Word hoặc in để ký. Nếu cần chỉnh sửa, sửa xong bấm gửi lại, phiếu mới sẽ thay thế phiếu cũ.';
+      });
+    } }, 'Gửi phiếu');
+    var note = h('p', { class: 'mute' }, 'Bấm "Gửi phiếu" để chuyển nội dung kê khai về chi bộ. File Word và bản in dùng để ký. File dữ liệu (.json) dùng để lưu tạm và mở ra khai tiếp lần sau.');
+    box.appendChild(h('div', { class: 'bar' }, [bSend, bWord, bPrint, bData, bOpen, fi]));
+    box.appendChild(sent);
+    box.appendChild(note);
+    pane.appendChild(box);
+    pane.appendChild(h('div', { class: 'doc', id: 'doc', html: buildDoc(cleanData(), mode) }));
+  }
+
+  document.head.appendChild(h('style', null, DOC_CSS));
+  drawLogin();
+})();
+</script>
+</body>
+</html>
