@@ -479,7 +479,7 @@ function call(fn) {
     card.appendChild(h('h2', null, 'Đăng nhập trang quản trị'));
     card.appendChild(fld('Tên đăng nhập', u)); card.appendChild(fld('Mật khẩu', pw));
     card.appendChild(h('div', { class: 'bar' }, [btn])); card.appendChild(er);
-    card.appendChild(h('p', { class: 'hint', style: 'margin-top:12px' }, 'Quên mật khẩu: liên hệ chủ sở hữu bảng tính để đặt lại mật khẩu tại menu "Mẫu 367" trong Google Sheets.'));
+    card.appendChild(h('p', { class: 'hint', style: 'margin-top:12px' }, 'Quên mật khẩu: liên hệ người quản lý hệ thống để được đặt lại mật khẩu.'));
     pane.appendChild(card);
   }
 
@@ -662,8 +662,8 @@ function call(fn) {
       '<li>Dữ liệu tự đổ về Google Sheets: trang tính "Phieu" (mỗi phiếu một dòng) và "ThanNhan" (mỗi thân nhân một dòng). Có thể tải về Excel từ menu Tệp của Google Sheets.</li>' +
       '<li>Tab "Phiếu đã nhận": bấm "Tải phiếu từ hệ thống", kiểm tra hồ sơ trùng, tải file Word báo cáo 367 hoàn chỉnh.</li></ol>' +
       '<h4 class="sec">Quản trị viên</h4><ul>' +
-      '<li>Bổ sung quản trị viên tại tab "Quản trị viên" hoặc tại menu "Mẫu 367" trong Google Sheets.</li>' +
-      '<li>Quên mật khẩu: chủ sở hữu bảng tính đặt lại tại menu "Mẫu 367" &gt; "Đặt lại mật khẩu quản trị viên".</li></ul>' +
+      '<li>Bổ sung quản trị viên tại tab "Quản trị viên". Người được bổ sung dùng mật khẩu tạm và phải đổi ở lần đăng nhập đầu tiên.</li>' +
+      '<li>Quên mật khẩu: người quản lý hệ thống chạy hàm datLaiMatKhauQuanTri trong Apps Script; mật khẩu tạm mới được ghi vào trang tính HuongDan.</li></ul>' +
       '<h4 class="sec">Lưu ý về bảo mật</h4><ul>' +
       '<li>Việc xác thực được thực hiện ở máy chủ; số giấy tờ của nhân vật trung tâm không nằm trong trang web gửi cho thân nhân.</li>' +
       '<li>Toàn bộ dữ liệu nằm trong bảng tính Google Sheets. Chỉ chia sẻ bảng tính cho đúng người có trách nhiệm; người được chia sẻ bảng tính xem được toàn bộ dữ liệu kê khai.</li>' +
